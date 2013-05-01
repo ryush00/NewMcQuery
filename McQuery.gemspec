@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = McQuery::VERSION
   spec.authors       = ["Benjamin James Harrison-Sims"]
   spec.email         = ["tehrainbowguy@gmail.com"]
-  spec.description   = "Server ping for Minecraft."
+  spec.description   = "Server ping for Minecraft. A work in progress."
   spec.summary       = "Server ping for Minecraft."
   spec.homepage      = "http://github.com/TehRainbowGuy/McQuery"
   spec.license       = "MIT"
