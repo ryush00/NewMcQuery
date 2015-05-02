@@ -14,7 +14,7 @@ module McQuery
       s = TCPSocket.open(@hostname, @port)
 
       s.puts "\xFE\x01"
-      repl = s.gets
+      repl = s.read
       s.close
       qstring = repl[3,repl.length].force_encoding("utf-16be").encode("utf-8")
       qarray = qstring.split("\0")
