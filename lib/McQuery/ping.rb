@@ -3,8 +3,8 @@ require 'socket'
 module McQuery
     class Ping
         def initialize(host, port=25565)
-            @host = host
-            @port = port
+            @host = host.to_s
+            @port = port.to_i
         end
 
         def ping
