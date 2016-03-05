@@ -10,7 +10,8 @@ module McQuery
         def ping
             socket = TCPSocket.open(@host, @port)
             # packet identifier & payload ...
-            socket.write([0xFE, 0x01, 0xFA].pack('CCC'))
+            socket.write([0xFE, 0x01].pack('CC'))
+            socket.write([0xFA].pack('C'))            
             socket.write(encode_string('MC|PingHost'))
             socket.write([7 + 2 * @host.length].pack('n'))
             socket.write([74].pack('c'))
